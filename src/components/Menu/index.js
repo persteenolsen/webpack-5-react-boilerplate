@@ -15,13 +15,36 @@ import webpackLogo from 'images/favicon.png';
 
 export default function BasicRouterExample() {
   return (
-   
-      <div>
-	    
-        <Link to="/"><img width="50px" src={webpackLogo} alt="Webpack Logo" /></Link>   
-		<Link to="/">Home</Link> | <Link to="/about">About</Link> | <Link to="/myinfo">Per Steen Olsen</Link> | <Link to="/error">Secret</Link>
-         
-		 <br /><br />
+       
+	   <div>
+	   
+		<nav className="navbar navbar-expand-lg navbar-light">
+                    
+            <Link to="/">
+			   <img width="50px" src={webpackLogo} alt="Webpack Logo" />
+			</Link>
+					
+             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+             <span className="navbar-toggler-icon"></span>
+             </button>
+						
+             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+	  	  
+	            <div className="navbar-nav">
+                       
+					   <Link to="/" className="nav-item nav-link">Home</Link>
+                       <Link to="/about" className="nav-item nav-link">About</Link>
+					   <Link to="/myinfo" className="nav-item nav-link">Per Steen Olsen</Link>
+                       <Link to="/error" className="nav-item nav-link">Secret</Link>
+                 
+				 </div>
+				
+			   </div>
+				
+         </nav>
+          
+	    <br />
+		 
 
         {/*
           A <Switch> looks through all its children <Route>

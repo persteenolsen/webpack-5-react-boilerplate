@@ -14,8 +14,7 @@ class App extends React.Component {
 	   
       return (
          <div>
-		  
-		  <Header />
+		  <Header />	 
 		  <Menu />
 		  <Bottom />
 		
