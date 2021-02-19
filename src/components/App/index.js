@@ -3,8 +3,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 // Note: Using an Alias in Webpack
-import FrontPage from 'components/FrontPage/';
+import Header from 'components/Header/';
 import Menu from 'components/Menu/';
+import Bottom from 'components/Bottom/';
 
 
 class App extends React.Component { 
@@ -14,8 +15,9 @@ class App extends React.Component {
       return (
          <div>
 		  
+		  <Header />
 		  <Menu />
-		  <FrontPage />
+		  <Bottom />
 		
          </div>
       );

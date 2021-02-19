@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Import of an asset usin alias in Webpack
-import LOGO from 'images/logo_persteenolsen.jpg';
+import LOGO from 'images/persteenolsen.jpg';
 
 
 class MyInfo extends React.Component { 
@@ -10,11 +10,13 @@ class MyInfo extends React.Component {
          <div>
 		 
 		
-		   <h2>Per Steen Olsen</h2>
-			
-           <img src={LOGO} alt="Per Steen Olsen" />
+		   <h2>Per Steen Olsen</h2><br />
 		   
-		   <br/> <br/>
+		   <h4>Web Developer</h4><br />
+			
+           <img width="150px" src={LOGO} alt="Per Steen Olsen" />
+		   
+		   <br/>
 
          </div>
       );

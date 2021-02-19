@@ -3,20 +3,25 @@ import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
 
 
-// Note: Using an Alias in Webpack
+import Home from 'components/Home/';
+import About from 'components/About/';
 import MyInfo from 'components/MyInfo/';
-import Content from 'components/Content/';
 
+import Error from 'components/Error/';
+
+
+// Import of an asset usin alias in Webpack
+import webpackLogo from 'images/favicon.png';
 
 export default function BasicRouterExample() {
   return (
    
       <div>
 	    
-         <Link to="/">Home</Link> | <Link to="/about">About</Link> | <Link to="/content">Content</Link> | <Link to="/myinfo">Per Steen Olsen</Link>
+        <Link to="/"><img width="50px" src={webpackLogo} alt="Webpack Logo" /></Link>   
+		<Link to="/">Home</Link> | <Link to="/about">About</Link> | <Link to="/myinfo">Per Steen Olsen</Link> | <Link to="/error">Secret</Link>
          
-
-        <hr />
+		 <br /><br />
 
         {/*
           A <Switch> looks through all its children <Route>
@@ -35,16 +40,13 @@ export default function BasicRouterExample() {
           <Route path="/about">
             <About />
           </Route>
-		  
-		  
-		   <Route path="/content">
-            <Content />
-          </Route>
+
 		  
 		   <Route path="/myinfo">
             <MyInfo />
           </Route>
 
+		  <Route path="*" component={Error} />
 		  
         </Switch>
 		
@@ -53,21 +55,4 @@ export default function BasicRouterExample() {
   );
 }
 
-// You can think of these components as "pages"
-// in your app.
 
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
