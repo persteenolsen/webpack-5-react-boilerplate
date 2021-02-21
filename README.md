@@ -18,11 +18,22 @@ npm prod
 # Features
 
 - [webpack](https://webpack.js.org/)
+- [React](https://reactjs.org/)
 - [Babel](https://babeljs.io/)
 - [Sass](https://sass-lang.com/)
 - [PostCSS](https://postcss.org/)
 
-# Dependencies
+# Dependencies / devDependencies
+
+# React
+
+
+- [`react`](https://www.npmjs.com/package/react) - React is a JavaScript library for creating user interfaces. For creating React components.
+
+- [`react-dom`](https://www.npmjs.com/package/react-dom) - This package serves as the entry point to the DOM and server renderers for React. 
+
+- [`react-router-dom`](https://www.npmjs.com/package/react-router-dom) - This package serves as DOM for React Router. 
+
 
 # webpack
 

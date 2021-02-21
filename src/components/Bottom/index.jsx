@@ -6,7 +6,7 @@ class Bottom extends React.Component {
       return (
          <div>
 		   <br />
-          A demo of a single page application made in React
+          A demo of a single page application made in React, PostCSS and Bootstrap 
          </div>
       );
    }
