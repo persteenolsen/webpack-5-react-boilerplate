@@ -7,6 +7,8 @@ import Home from 'components/Home/';
 import About from 'components/About/';
 import MyInfo from 'components/MyInfo/';
 
+import { ListPosts } from 'components/ListPosts/';
+
 import Error from 'components/Error/';
 
 
@@ -35,6 +37,7 @@ export default function BasicRouterExample() {
 					   <Link to="/" className="nav-item nav-link">Home</Link>
                        <Link to="/about" className="nav-item nav-link">About</Link>
 					   <Link to="/myinfo" className="nav-item nav-link">Per Steen Olsen</Link>
+					   <Link to="/listposts" className="nav-item nav-link">Web API</Link>
                        <Link to="/error" className="nav-item nav-link">Secret</Link>
                  
 				 </div>
@@ -63,10 +66,13 @@ export default function BasicRouterExample() {
           <Route path="/about">
             <About />
           </Route>
-
 		  
 		   <Route path="/myinfo">
             <MyInfo />
+          </Route>
+		  
+		  <Route path="/listposts">
+            <ListPosts />
           </Route>
 
 		  <Route path="*" component={Error} />
