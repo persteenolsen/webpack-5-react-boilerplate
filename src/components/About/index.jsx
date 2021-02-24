@@ -20,7 +20,8 @@ class About extends React.Component {
 			    Showing some of the power of Webpack <br />
                 Showing routing in React <br />
 				Custom 404 Error page. Click on the link Secret in the menu for e demo<br />
-				Serving static assets like images, styles and fonts <br /><br />
+				Serving static assets like images, styles and fonts <br />
+				Consuming JSON data from a test Web API <br /> <br />
 			                  
 			   
                 <b>Module Bundler</b> <br />
@@ -35,6 +36,11 @@ class About extends React.Component {
 				PostCSS <br />
                 HTML <br />
                 Bootstrap 4 by CDN for the responsive design <br /> <br />
+				
+				<b>The Web API - The backend</b> <br />
+ 
+                The Web API is the jsonplaceholder used for testing frontends <br /> <br />
+
 
                 				
                 <b>Security</b> <br />

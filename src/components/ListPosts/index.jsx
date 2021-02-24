@@ -1,52 +1,54 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-	
-function ListPosts () {
+function ListPosts() {
 
-   
- const [users, setUsers] = useState([
-      		
-		{ id: 1, firstName: 'Per', lastName: 'Olsen', email: 'per.olsen@test.com', role: 'Admin' },
-        { id: 2, firstName: 'Ole', lastName: 'Jensen', email: 'ole.jensen@test.com', role: 'User' },
-        { id: 3, firstName: 'Peter', lastName: 'Hansen', email: 'peter.hansen@test.com', role: 'User' },
-        { id: 4, firstName: 'Hans', lastName: 'Larsen', email: 'hans.larsen@test.com', role: 'User' },
-        { id: 5, firstName: 'Ib', lastName: 'Ibsen', email: 'ib.ibsen@test.com', role: 'User' }
-		
-    ]);
-	
+    const [totalPosts, setTotalPosts] = useState(null);
+
+    useEffect(() => {
+        
+		    // GET request using fetch inside useEffect React hook
+            fetch('https://jsonplaceholder.typicode.com/posts??_start=0&_limit=10')
+           
+		    .then(response => response.json())
+            .then(data => setTotalPosts(data));
+			
+
+    // empty dependency array means this effect will only run once (like componentDidMount in classes)
+    }, []);
 
     return (
-         
-		    <div className="table-responsive">
-            
-			<h3 className="p-3 text-center">React - Display a list of items</h3>
-			
-			 A simulation of calling a Web API by a GET Request
-            <br /><br />
-		   
-            <table className="table table-striped table-bordered">
-                <thead>
+           
+		   <div className="card text-center m-3">
+             <h5 className="card-header">Receiving the first 10 posts from jsonplaceholder Web API by a GET Request</h5>
+               <div className="table-responsive">
+           
+		       <table className="table table-striped">
+                  <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Role</th>
+                        
+                        <th style={{ width: '25%' }}>Id</th>
+                        <th style={{ width: '75%' }}>Title</th>
+                        
                     </tr>
-                </thead>
-                <tbody>
-                    {users && users.map(user =>
-                        <tr key={user.id}>
-                            <td>{user.firstName} {user.lastName}</td>
-                            <td>{user.email}</td>
-                            <td>{user.role}</td>
+                  </thead>
+                  <tbody>
+				
+				 { totalPosts && totalPosts.map(post =>
+                        
+						<tr key={post.id}>
+                            <td>{post.id}</td>
+                            <td>{post.title}</td>
+
                         </tr>
                     )}
-                </tbody>
-            </table>
-        </div>
-		 
-      );
-  
+					
+					</tbody>
+				</table>
+				
+              </div>
+          </div>
+    );
 }
 
 export { ListPosts };
