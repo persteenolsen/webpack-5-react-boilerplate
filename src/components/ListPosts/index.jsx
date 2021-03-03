@@ -1,9 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 function ListPosts() {
-
-    const [totalPosts, setTotalPosts] = useState(null);
+    
+	const [totalPosts, setTotalPosts] = useState(null);
+	
+	let partofroute = "/selectedpost";
 
     useEffect(() => {
         
@@ -19,16 +22,19 @@ function ListPosts() {
 
     return (
            
-		   <div className="card text-center m-3">
-             <h5 className="card-header">Receiving the first 10 posts from jsonplaceholder Web API by a GET Request</h5>
+		   <div>
+		   
+             <h2>The result of a GET Request towards a test Web API</h2>
+		   
                <div className="table-responsive">
            
+				
 		       <table className="table table-striped">
                   <thead>
                     <tr>
                         
-                        <th style={{ width: '25%' }}>Id</th>
-                        <th style={{ width: '75%' }}>Title</th>
+                        <th style={{ width: '20%' }}>Id</th>
+                        <th style={{ width: '80%' }}>Title</th>
                         
                     </tr>
                   </thead>
@@ -36,10 +42,11 @@ function ListPosts() {
 				
 				 { totalPosts && totalPosts.map(post =>
                         
+						
 						<tr key={post.id}>
                             <td>{post.id}</td>
-                            <td>{post.title}</td>
-
+                            <td> <Link to={`${partofroute}/${post.id}`} className="nav-item nav-link">{post.title}</Link></td>
+                           
                         </tr>
                     )}
 					

@@ -9,6 +9,8 @@ import MyInfo from 'components/MyInfo/';
 
 import { ListPosts } from 'components/ListPosts/';
 
+import { SelectedPost } from 'components/SelectedPost/';
+
 import Error from 'components/Error/';
 
 
@@ -73,6 +75,10 @@ export default function BasicRouterExample() {
 		  
 		  <Route path="/listposts">
             <ListPosts />
+          </Route>
+		  
+		   <Route path="/selectedpost/:id">
+            <SelectedPost />
           </Route>
 
 		  <Route path="*" component={Error} />
