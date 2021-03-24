@@ -8,7 +8,7 @@
   "scripts": {
     "start": "webpack serve --config config/webpack.dev.js --progress",
     "build": "webpack --config config/webpack.prod.js",
-	"prod": "http-server ./dist -a localhost -p 8005 -o"
+    "prod": "http-server ./dist -a localhost -p 8005 -o"
   },
   "keywords": [
     "webpack",
@@ -48,6 +48,7 @@
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-hook-form": "^6.15.5",
     "react-router-dom": "^5.2.0"
   }
 }

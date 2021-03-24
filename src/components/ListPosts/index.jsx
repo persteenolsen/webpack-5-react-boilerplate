@@ -7,11 +7,12 @@ function ListPosts() {
 	const [totalPosts, setTotalPosts] = useState(null);
 	
 	let partofroute = "/selectedpost";
+	let partofrouteedit = "/editpost";
 
     useEffect(() => {
         
 		    // GET request using fetch inside useEffect React hook
-            fetch('https://jsonplaceholder.typicode.com/posts??_start=0&_limit=10')
+            fetch('https://jsonplaceholder.typicode.com/posts?_start=0&_limit=10')
            
 		    .then(response => response.json())
             .then(data => setTotalPosts(data));
@@ -33,7 +34,8 @@ function ListPosts() {
                   <thead>
                     <tr>
                         
-                        <th style={{ width: '20%' }}>Id</th>
+                        <th style={{ width: '10%' }}>Id</th>
+						<th style={{ width: '10%' }}></th>
                         <th style={{ width: '80%' }}>Title</th>
                         
                     </tr>
@@ -45,6 +47,7 @@ function ListPosts() {
 						
 						<tr key={post.id}>
                             <td>{post.id}</td>
+							<td> <Link to={`${partofrouteedit}/${post.id}`} className="nav-item nav-link">Edit</Link></td>
                             <td> <Link to={`${partofroute}/${post.id}`} className="nav-item nav-link">{post.title}</Link></td>
                            
                         </tr>
