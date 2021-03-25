@@ -12,6 +12,8 @@ import { SelectedPost } from 'components/SelectedPost/';
 
 import { EditPost } from 'components/EditPost/';
 
+import { CreatePost } from 'components/CreatePost/';
+
 
 import Error from 'components/Error/';
 
@@ -83,8 +85,12 @@ export default function BasicRouterExample() {
             <SelectedPost />
           </Route>
 		  
-		    <Route path="/editpost/:id">
+		   <Route path="/editpost/:id">
             <EditPost />
+          </Route>
+		  
+		   <Route path="/createpost">
+            <CreatePost />
           </Route>
 
 		  <Route path="*" component={Error} />

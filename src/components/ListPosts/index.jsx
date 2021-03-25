@@ -26,6 +26,10 @@ function ListPosts() {
 		   <div>
 		   
              <h2>The result of a GET Request towards a test Web API</h2>
+			 <br />
+			 			 
+			 <Link to="/createpost" >Create a new Post</Link>
+			 <br /><br />
 		   
                <div className="table-responsive">
            
