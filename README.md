@@ -51,14 +51,8 @@ npm prod
 (https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) - Use properties on a class
 - [`@babel/preset-env`]
 (https://babeljs.io/docs/en/babel-preset-env) - Smart defaults for Babel
-- [`@babel/babel-plugin-transform-runtime`]
+- [`@babel/plugin-transform-runtime`]
 (https://babeljs.io/docs/en/babel-plugin-transform-runtime) - Helper for Babel to use async/await
-- [`@babel/plugin-proposal-object-rest-spread`] 
-(https://babeljs.io/docs/en/babel-plugin-proposal-object-rest-spread) - For using rest
-- [`@babel/plugin-transform-arrow-functions`] 
-(https://babeljs.io/docs/en/babel-plugin-transform-arrow-functions) - For using arrow funtions
-- [`@babel/plugin-transform-async-to-generator`] 
-(https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator) - To use async and generators
 
 
 # Loaders

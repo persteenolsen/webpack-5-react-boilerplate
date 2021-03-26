@@ -20,7 +20,49 @@ function ListPosts() {
 
     // empty dependency array means this effect will only run once (like componentDidMount in classes)
     }, []);
+	
+	
+	// Note: When using async / await the package "@babel/plugin-transform-runtime" was added in babelrc + package.json
+	 function deleteUser( id ) {
+	
+	  
+       if (confirm('Are you sure?')) {
+	      
+		 // Simulation of an error returned from the Web API	
+	     // fetch('https://jsonplaceholder.typicode.com/invalid-url', { method: 'DELETE' })
+	     fetch('https://jsonplaceholder.typicode.com/posts/' + id, { method: 'DELETE' })
+        
+		 .then(async response => {
+             
+			 const data = await response.json();
 
+             // check for error response
+             if (!response.ok) {
+                
+				// get error message from body or default to response status
+                const error = (data && data.message) || response.status;
+                return Promise.reject(error);
+            }
+
+            alert( 'The Post was deleted successfully !' );
+            
+			// Simulation of an delete operation by removing the selected Post from the GUI
+			// Note: There may be an alternative in the React way!
+			document.getElementById(id).outerHTML = "";
+			
+        })
+        .catch(error => {
+           
+            console.error('There was an error!', error);
+			alert( 'Following error was returned from the Web API: ' + error );
+			
+        });
+		
+	   
+	   }
+	}
+
+	
     return (
            
 		   <div>
@@ -40,7 +82,8 @@ function ListPosts() {
                         
                         <th style={{ width: '10%' }}>Id</th>
 						<th style={{ width: '10%' }}></th>
-                        <th style={{ width: '80%' }}>Title</th>
+						<th style={{ width: '10%' }}></th>
+                        <th style={{ width: '70%' }}>Title</th>
                         
                     </tr>
                   </thead>
@@ -49,8 +92,10 @@ function ListPosts() {
 				 { totalPosts && totalPosts.map(post =>
                         
 						
-						<tr key={post.id}>
+						<tr key={post.id} id={post.id}>
                             <td>{post.id}</td>
+							<td><button onClick={() => deleteUser(post.id)} className="btn btn-sm btn-danger">Delete</button></td>
+							  
 							<td> <Link to={`${partofrouteedit}/${post.id}`} className="nav-item nav-link">Edit</Link></td>
                             <td> <Link to={`${partofroute}/${post.id}`} className="nav-item nav-link">{post.title}</Link></td>
                            
