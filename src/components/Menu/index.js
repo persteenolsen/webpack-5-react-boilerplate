@@ -41,7 +41,7 @@ export default function BasicRouterExample() {
 	            <div className="navbar-nav">
                        
 					   <Link to="/" className="nav-item nav-link">Home</Link>
-                       <Link to="/about" className="nav-item nav-link">About</Link>
+                       <Link to="/about" className="nav-item nav-link">About this App</Link>
 					   <Link to="/myinfo" className="nav-item nav-link">Per Steen Olsen</Link>
 					   <Link to="/listposts" className="nav-item nav-link">Web API</Link>
                        <Link to="/error" className="nav-item nav-link">Secret</Link>

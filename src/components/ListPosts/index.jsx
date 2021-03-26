@@ -73,7 +73,7 @@ function ListPosts() {
 			 <Link to="/createpost" >Create a new Post</Link>
 			 <br /><br />
 		   
-               <div className="table-responsive">
+             <div className="table-responsive">
            
 				
 		       <table className="table table-striped">
@@ -93,11 +93,11 @@ function ListPosts() {
                         
 						
 						<tr key={post.id} id={post.id}>
-                            <td>{post.id}</td>
-							<td><button onClick={() => deleteUser(post.id)} className="btn btn-sm btn-danger">Delete</button></td>
+                            <td style={{ width: '10%' }}>{post.id}</td>
+							<td style={{ width: '10%' }}><button type="button" onClick={() => deleteUser(post.id)} className="btn btn-danger">Delete</button></td>
 							  
-							<td> <Link to={`${partofrouteedit}/${post.id}`} className="nav-item nav-link">Edit</Link></td>
-                            <td> <Link to={`${partofroute}/${post.id}`} className="nav-item nav-link">{post.title}</Link></td>
+							<td style={{ width: '10%' }}> <Link to={`${partofrouteedit}/${post.id}`} className="nav-item nav-link">Edit</Link></td>
+                            <td style={{ width: '70%' }}> <Link to={`${partofroute}/${post.id}`} className="nav-item nav-link">{post.title}</Link></td>
                            
                         </tr>
                     )}
