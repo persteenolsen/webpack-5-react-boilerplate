@@ -96,8 +96,8 @@ function ListPosts() {
                             <td style={{ width: '10%' }}>{post.id}</td>
 							<td style={{ width: '10%' }}><button type="button" onClick={() => deleteUser(post.id)} className="btn btn-danger">Delete</button></td>
 							  
-							<td style={{ width: '10%' }}> <Link to={`${partofrouteedit}/${post.id}`} className="nav-item nav-link">Edit</Link></td>
-                            <td style={{ width: '70%' }}> <Link to={`${partofroute}/${post.id}`} className="nav-item nav-link">{post.title}</Link></td>
+							<td style={{ width: '10%' }}> <Link to={`${partofrouteedit}/${post.id}`} >Edit</Link></td>
+                            <td style={{ width: '70%' }}> <Link to={`${partofroute}/${post.id}`} >{post.title}</Link></td>
                            
                         </tr>
                     )}

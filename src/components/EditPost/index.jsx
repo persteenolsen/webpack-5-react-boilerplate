@@ -101,7 +101,7 @@ function EditPost() {
 							 					 
                     <br />
 					
-					<input className="btn btn-warning" type="submit" />
+					<input className="btn btn-warning custom-text-color-button" type="submit" />
 							
 				</form> 
 				
