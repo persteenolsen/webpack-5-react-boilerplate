@@ -12,7 +12,7 @@ class About extends React.Component {
                 <br/> <br/>
 				
                 <b>Last Updated</b>  <br />
-                27-03-2021 <br /> <br />
+                01-04-2021 <br /> <br />
                 
 				
                 <b>Main functionality</b> <br />
@@ -21,6 +21,7 @@ class About extends React.Component {
                 Showing routing in React <br />
 				Custom 404 Error page. Click on the link Secret in the menu for e demo<br />
 				Serving static assets like images, styles and fonts <br />
+				Partly supports IE11 among other Browsers<br />
 				GET, POST, PUT and DELETE operations towards the test Web API <br /> <br />
 			                  
 			   

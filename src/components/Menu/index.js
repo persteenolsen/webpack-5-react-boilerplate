@@ -1,3 +1,5 @@
+//import 'whatwg-fetch';
+//import 'core-js/stable';
 
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
@@ -9,10 +11,8 @@ import MyInfo from 'components/MyInfo/';
 
 import { ListPosts } from 'components/ListPosts/';
 import { SelectedPost } from 'components/SelectedPost/';
-
 import { EditPost } from 'components/EditPost/';
-
-import { CreatePost } from 'components/CreatePost/';
+import { CreatePost } from 'components/CreatePost/'; 
 
 
 import Error from 'components/Error/';
@@ -77,7 +77,7 @@ export default function BasicRouterExample() {
             <MyInfo />
           </Route>
 		  
-		  <Route path="/listposts">
+		   <Route path="/listposts">
             <ListPosts />
           </Route>
 		  
@@ -89,7 +89,7 @@ export default function BasicRouterExample() {
             <EditPost />
           </Route>
 		  
-		   <Route path="/createpost">
+		    <Route path="/createpost">
             <CreatePost />
           </Route>
 

@@ -2,7 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from "react-router-dom";
 
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form/dist/index.ie11'; 
+
+//import { useForm } from "react-hook-form";
 
 function CreatePost() {
 
@@ -77,18 +79,18 @@ function CreatePost() {
 
 					
                   	<label><b>Title:</b></label><br/>					  
-                    <input size={30} name="titlePost" ref={register({ required: true, maxLength: 25 })} />
+                    <input size="30" name="titlePost" ref={register({ required: true, maxLength: 25 })} />
 				    {errors.titlePost && <span> Required - max 25 characters</span>}
 							  
                     <br /> 
 							   
 				 	<label><b>Body:</b></label><br/>
-				    <textarea name="bodyPost" cols={32} rows={4} ref={register({ required: true, maxLength: 100 })} />
+				    <textarea name="bodyPost" cols="32" rows="4" ref={register({ required: true, maxLength: 100 })} />
 				    {errors.bodyPost && <span> Required - max 100 characters</span>}
 							 					 
                     <br />
 					
-					<input className="btn btn-warning custom-text-color-button" type="submit" />
+					<input className="btn btn-warning custom-text-color-button" value="Submit"  type="submit" />
 							
 				</form> 
 				

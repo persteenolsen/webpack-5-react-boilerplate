@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from "react-router-dom";
 
-import { useForm } from "react-hook-form";
+//import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form/dist/index.ie11'; 
 
 function EditPost() {
 
@@ -86,22 +87,23 @@ function EditPost() {
 				 <form onSubmit={handleSubmit(onSubmit)}>
 				 
 				    <label><b>Id:</b></label><br/>					  
-                    <input readOnly size={2} name="idPost" ref={register({ required: true })} defaultValue={selectedPostId} />
+                    <input readOnly size="2" name="idPost" ref={register({ required: true })} value={selectedPostId} />
 					<br />
 					
                   	<label><b>Title:</b></label><br/>					  
-                    <input size={30} name="titlePost" ref={register({ required: true, maxLength: 75 })} defaultValue={selectedPostTitle} />
+                    <input size="30" name="titlePost" ref={register({ required: true, maxLength: 75 })} defaultValue={selectedPostTitle} />
 				    {errors.titlePost && <span> Required - max 75 characters</span>}
 							  
                     <br /> 
 							   
 				 	<label><b>Body:</b></label><br/>
-				    <textarea name="bodyPost" cols={32} rows={4} ref={register({ required: true, maxLength: 300 })} defaultValue={selectedPostBody} />
+				    <textarea name="bodyPost" cols="32" rows="4" ref={register({ required: true, maxLength: 300 })} defaultValue={selectedPostBody} / >
+					
 				    {errors.bodyPost && <span> Required - max 300 characters</span>}
 							 					 
                     <br />
 					
-					<input className="btn btn-warning custom-text-color-button" type="submit" />
+					<input className="btn btn-warning custom-text-color-button" value="Submit" type="submit" />
 							
 				</form> 
 				

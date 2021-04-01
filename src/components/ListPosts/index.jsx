@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 
@@ -80,10 +81,10 @@ function ListPosts() {
                   <thead>
                     <tr>
                         
-                        <th style={{ width: '10%' }}>Id</th>
-						<th style={{ width: '10%' }}></th>
-						<th style={{ width: '10%' }}></th>
-                        <th style={{ width: '70%' }}>Title</th>
+                        <th>Id</th>
+						<th></th>
+						<th></th>
+                        <th>Title</th>
                         
                     </tr>
                   </thead>
@@ -93,11 +94,11 @@ function ListPosts() {
                         
 						
 						<tr key={post.id} id={post.id}>
-                            <td style={{ width: '10%' }}>{post.id}</td>
-							<td style={{ width: '10%' }}><button type="button" onClick={() => deleteUser(post.id)} className="btn btn-danger">Delete</button></td>
+                            <td>{post.id}</td>
+							<td><button type="button" onClick={() => deleteUser(post.id)} className="btn btn-danger">Delete</button></td>
 							  
-							<td style={{ width: '10%' }}> <Link to={`${partofrouteedit}/${post.id}`} >Edit</Link></td>
-                            <td style={{ width: '70%' }}> <Link to={`${partofroute}/${post.id}`} >{post.title}</Link></td>
+							<td> <Link to={`${partofrouteedit}/${post.id}`} >Edit</Link></td>
+                            <td> <Link to={`${partofroute}/${post.id}`} >{post.title}</Link></td>
                            
                         </tr>
                     )}

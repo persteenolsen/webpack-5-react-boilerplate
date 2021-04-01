@@ -47,9 +47,9 @@ function SelectedPost() {
                   <thead>
                     <tr>
                         
-                        <th style={{ width: '20%' }}>Id</th>
-                        <th style={{ width: '40%' }}>Title</th>
-						<th style={{ width: '40%' }}>Body</th>
+                        <th>Id</th>
+                        <th>Title</th>
+						<th>Body</th>
                         
                     </tr>
                   </thead>

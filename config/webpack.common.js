@@ -9,8 +9,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 
 module.exports = {
-  // Where webpack looks to start building the bundle
-  entry: [paths.src + '/index.js'],
+	
+  // Where webpack looks to start building the bundle and include polyfill
+  entry: [ '@babel/polyfill', 'whatwg-fetch', paths.src + '/index.js'],
 
   // Where webpack outputs the assets and bundles
   output: {
@@ -18,6 +19,12 @@ module.exports = {
     filename: '[name].bundle.js',
     publicPath: '/',
   },
+    
+  
+  // Magic happen here trnaanspiling to es5 to partly support older browser like IE11 / 
+  // Note: This statement is not needed in webpack 4
+  target: ['web', 'es5'], 
+  
   resolve: {
         extensions: ['.js', '.jsx'],
         alias: {
@@ -26,6 +33,8 @@ module.exports = {
 		    'styles': pathtoresolve.resolve(__dirname, '../src/styles/'),
 		 }
     },
+	
+
   // Customize the webpack build process
   plugins: [
     
