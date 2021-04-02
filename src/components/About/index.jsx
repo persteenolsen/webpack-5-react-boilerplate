@@ -17,7 +17,7 @@ class About extends React.Component {
 				
                 <b>Main functionality</b> <br />
                 				                 
-			    Showing some of the power of Webpack <br />
+			    Showing the power of Webpack <br />
                 Showing routing in React <br />
 				Custom 404 Error page. Click on the link Secret in the menu for e demo<br />
 				Serving static assets like images, styles and fonts <br />
