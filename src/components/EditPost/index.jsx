@@ -1,3 +1,8 @@
+// Note: The use of "useBuiltIns" in .babelrc would take care of loading polyfill in most cases but somehow not here!
+import "core-js/stable";
+
+// Maybe not needed !
+import "regenerator-runtime/runtime";
 
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from "react-router-dom";

@@ -50,8 +50,8 @@
     "url": "https://github.com/persteenolsen/webpack-5-react-boilerplate"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
-    "@babel/runtime-corejs3": "^7.13.10",
+    "@babel/runtime": "^7.13.10",
+    "core-js": "^3.10.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hook-form": "^6.15.5",

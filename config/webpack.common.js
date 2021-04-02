@@ -11,7 +11,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
 	
   // Where webpack looks to start building the bundle and include polyfill
-  entry: [ '@babel/polyfill', 'whatwg-fetch', paths.src + '/index.js'],
+  entry: [ 'whatwg-fetch', paths.src + '/index.js'],
 
   // Where webpack outputs the assets and bundles
   output: {

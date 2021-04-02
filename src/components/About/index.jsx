@@ -12,7 +12,7 @@ class About extends React.Component {
                 <br/> <br/>
 				
                 <b>Last Updated</b>  <br />
-                01-04-2021 <br /> <br />
+                02-04-2021 <br /> <br />
                 
 				
                 <b>Main functionality</b> <br />
