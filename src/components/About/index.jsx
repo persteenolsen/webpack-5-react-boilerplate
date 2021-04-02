@@ -21,7 +21,7 @@ class About extends React.Component {
                 Showing routing in React <br />
 				Custom 404 Error page. Click on the link Secret in the menu for e demo<br />
 				Serving static assets like images, styles and fonts <br />
-				Partly supports The IE11 Browser<br />
+				Partly supports The IE11 Browser using React Hook Form<br />
 				GET, POST, PUT and DELETE operations towards the test Web API <br /> <br />
 			                  
 			   
