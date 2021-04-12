@@ -1,8 +1,8 @@
 // Note: The use of "useBuiltIns" in .babelrc would take care of loading polyfill in most cases but somehow not here!
-import "core-js/stable";
+//import "core-js/stable";
 
 // Maybe not needed !
-import "regenerator-runtime/runtime";
+//import "regenerator-runtime/runtime";
 
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from "react-router-dom";
@@ -92,7 +92,7 @@ function EditPost() {
 				 <form onSubmit={handleSubmit(onSubmit)}>
 				 
 				    <label><b>Id:</b></label><br/>					  
-                    <input readOnly size="2" name="idPost" ref={register({ required: true })} value={selectedPostId} />
+                    <input readOnly size="2" name="idPost" ref={register({ required: true })} defaultValue={selectedPostId} />
 					<br />
 					
                   	<label><b>Title:</b></label><br/>					  
@@ -102,11 +102,11 @@ function EditPost() {
                     <br /> 
 							   
 				 	<label><b>Body:</b></label><br/>
-				    <textarea name="bodyPost" cols="32" rows="4" ref={register({ required: true, maxLength: 300 })} defaultValue={selectedPostBody} / >
-					
+				    
+					 <input size="30" name="bodyPost" ref={register({ required: true, maxLength: 300 })} defaultValue={selectedPostBody} />
 				    {errors.bodyPost && <span> Required - max 300 characters</span>}
 							 					 
-                    <br />
+                    <br /><br />
 					
 					<input className="btn btn-warning custom-text-color-button" value="Submit" type="submit" />
 							
