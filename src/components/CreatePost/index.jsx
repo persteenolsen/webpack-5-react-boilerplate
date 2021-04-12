@@ -1,11 +1,12 @@
-// Note: CDN Babel Polyfill in Template.html could be used instead of the lines below like in EditPost
 // The use of "useBuiltIns" in .babelrc would take care of loading polyfill in most cases but somehow not here!
+// Note: As an alternative use babel polyfill by cdn in the template.html
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from "react-router-dom";
 
+// For using IE 11 also
 import { useForm } from 'react-hook-form/dist/index.ie11'; 
 
 //import { useForm } from "react-hook-form";

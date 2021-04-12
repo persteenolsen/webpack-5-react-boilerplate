@@ -1,13 +1,14 @@
-// Note: The use of "useBuiltIns" in .babelrc would take care of loading polyfill in most cases but somehow not here!
-//import "core-js/stable";
-
-// Maybe not needed !
-//import "regenerator-runtime/runtime";
+// The use of "useBuiltIns" in .babelrc would take care of loading polyfill in most cases but somehow not here!
+// Note: As an alternative use babel polyfill by cdn in the template.html
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from "react-router-dom";
 
 //import { useForm } from "react-hook-form";
+
+// For using IE 11 also
 import { useForm } from 'react-hook-form/dist/index.ie11'; 
 
 function EditPost() {
