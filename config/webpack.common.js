@@ -20,11 +20,7 @@ module.exports = {
     publicPath: '/',
   },
     
-  
-  // Magic happen here trnaanspiling to es5 to partly support older browser like IE11 / 
-  // Note: This statement is not needed in webpack 4
-  target: ['web', 'es5'], 
-  
+    
   resolve: {
         extensions: ['.js', '.jsx'],
         alias: {
