@@ -15,7 +15,10 @@ class Home extends React.Component {
 		   <br />
             
            <img width="150px" src={reactLogo} alt="React Logo" /> 
-		   			
+		   
+		   {/*Test*/}
+		   {/* <span className="test">Hey dude</span> */}
+		   
            <h4>Webpack 5 configured from scratch to serve React</h4>
 
          </div>

@@ -24,5 +24,8 @@ ReactDOM.render(
 // Note: Before npm run build the statement module.hot.accept(); needs to be disabled / comment out !!!
 // In Webpck HotModuleReplacementPlugin() is used to set hot to true. 
 // This way the browser dont need to reload the entire page when changing  file !
- module.hot.accept();
+// Note: Needed here - in contrast to Vue.js  !!
+ if (module.hot) {
+    module.hot.accept();
+ }
 
