@@ -12,12 +12,12 @@ class About extends React.Component {
                 <br/> <br/>
 				
                 <b>Last Updated</b>  <br />
-                - 10-10-2023 <br /> <br />
+                - 06-01-2025 <br /> <br />
                 
 				
                 <b>Main functionality</b> <br />
                 
-                - Upgraded from Node 12.16 to Node 14.17 <br />				
+                - Upgraded from Node 12.16 => Node 14.17 => 20.18.1<br />				
 			    - Showing the power of Webpack <br />
                 - Showing routing in React <br />
 				- Custom 404 Error page. Click on the link Secret in the menu for e demo<br />
