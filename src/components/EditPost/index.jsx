@@ -6,10 +6,12 @@ import "regenerator-runtime/runtime";
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from "react-router-dom";
 
-//import { useForm } from "react-hook-form";
+// Node: 07-01-2025 - upgrading react-hook-form 6 to 7
+import { useForm } from "react-hook-form";
 
+// Node: 07-01-2025 - upgrading react-hook-form 6 to 7
 // For using IE 11 also
-import { useForm } from 'react-hook-form/dist/index.ie11'; 
+//import { useForm } from 'react-hook-form/dist/index.ie11'; 
 
 function EditPost() {
 
@@ -17,6 +19,10 @@ function EditPost() {
 	const [ selectedPostTitle, setSelectedPostTitle] = useState(null);
 	const [ selectedPostBody, setSelectedPostBody] = useState(null);
 	
+        // Node: 07-01-2025 - upgrading react-hook-form 6 to 7
+        // const { register, handleSubmit, errors } = useForm();
+        const { register, handleSubmit, formState: { errors }} = useForm();
+
 	let { id } = useParams();
 
     useEffect(() => {
@@ -38,7 +44,7 @@ function EditPost() {
     // empty dependency array means this effect will only run once (like componentDidMount in classes)
     }, []);
 	
-	 const { register, handleSubmit, errors } = useForm();
+	
 	 
 	 // On Submit
      const onSubmit = data => { 
@@ -77,7 +83,7 @@ function EditPost() {
 	 };
 
     return (
-           
+          
 		   <div>
 		     <h2>Edit simulation of the selected Post</h2>
 			 
@@ -93,18 +99,18 @@ function EditPost() {
 				 <form onSubmit={handleSubmit(onSubmit)}>
 				 
 				    <label><b>Id:</b></label><br/>					  
-                    <input readOnly size="2" name="idPost" ref={register({ required: true })} defaultValue={selectedPostId} />
+                    <input readOnly size="2" name="idPost" {...register('idPost', { required: true })} defaultValue={selectedPostId} />
 					<br />
 					
                   	<label><b>Title:</b></label><br/>					  
-                    <input size="30" name="titlePost" ref={register({ required: true, maxLength: 75 })} defaultValue={selectedPostTitle} />
-				    {errors.titlePost && <span> Required - max 75 characters</span>}
+                    <input size="30" name="titlePost" {...register('titlePost', { required: true, maxLength: 75 })} defaultValue={selectedPostTitle} />
+			{errors.titlePost && <span> Required - max 75 characters</span>}
 							  
                     <br /> 
 							   
 				 	<label><b>Body:</b></label><br/>
 				    
-					 <input size="30" name="bodyPost" ref={register({ required: true, maxLength: 300 })} defaultValue={selectedPostBody} />
+					 <input size="30" name="bodyPost" {...register('bodyPost', { required: true, maxLength: 300 })} defaultValue={selectedPostBody} />
 				    {errors.bodyPost && <span> Required - max 300 characters</span>}
 							 					 
                     <br /><br />

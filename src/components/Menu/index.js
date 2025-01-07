@@ -2,7 +2,7 @@
 //import 'core-js/stable';
 
 import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 
 import Home from 'components/Home/';
@@ -55,47 +55,44 @@ export default function BasicRouterExample() {
 	    <br />
 		 
 
-        {/*
-          A <Switch> looks through all its children <Route>
-          elements and renders the first one whose path
-          matches the current URL. Use a <Switch> any time
-          you have multiple routes, but you want only one
-          of them to render at a time
-        */}
+        		
+        <Routes>
 		
-        <Switch>
-		
-          <Route exact path="/">
-            <Home />
+          <Route exact path="/" element={<Home />}>
+            
           </Route>
 		  
-          <Route path="/about">
-            <About />
+          <Route exact path="/about" element={<About />}>
+            
           </Route>
 		  
-		   <Route path="/myinfo">
-            <MyInfo />
+		   <Route exact path="/myinfo" element={<MyInfo />}>
+            
           </Route>
 		  
-		   <Route path="/listposts">
-            <ListPosts />
+		   <Route exact path="/listposts" element={<ListPosts />}>
+            
           </Route>
 		  
-		   <Route path="/selectedpost/:id">
-            <SelectedPost />
+		   <Route exact path="/selectedpost/:id" element={<SelectedPost />}>
+            
           </Route>
 		  
-		   <Route path="/editpost/:id">
-            <EditPost />
+		   <Route exact path="/editpost/:id" element={<EditPost />}>
+            
           </Route>
 		  
-		    <Route path="/createpost">
-            <CreatePost />
+		    <Route exact path="/createpost" element={<CreatePost />}>
+            
           </Route>
 
-		  <Route path="*" component={Error} />
+          
+		  <Route path="*" element={<Error />}>
+          </Route>
+            
 		  
-        </Switch>
+
+        </Routes>
 		
       </div>
    

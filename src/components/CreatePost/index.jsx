@@ -6,10 +6,12 @@ import "regenerator-runtime/runtime";
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from "react-router-dom";
 
+// Node: 07-01-2025 - upgrading react-hook-form 6 to 7
 // For using IE 11 also
-import { useForm } from 'react-hook-form/dist/index.ie11'; 
+//import { useForm } from 'react-hook-form/dist/index.ie11'; 
 
-//import { useForm } from "react-hook-form";
+// Node: 07-01-2025 - upgrading react-hook-form 6 to 7
+import { useForm } from "react-hook-form";
 
 function CreatePost() {
 
@@ -17,6 +19,10 @@ function CreatePost() {
 	const [ selectedPostTitle, setSelectedPostTitle] = useState(null);
 	const [ selectedPostBody, setSelectedPostBody] = useState(null);
 	
+        // Node: 07-01-2025 - upgrading react-hook-form 6 to 7
+        // const { register, handleSubmit, errors } = useForm();
+        const { register, handleSubmit, formState: { errors }} = useForm();
+
 	//let { id } = useParams();
 
     useEffect(() => {
@@ -27,8 +33,7 @@ function CreatePost() {
     // empty dependency array means this effect will only run once (like componentDidMount in classes)
     }, []);
 	
-	 const { register, handleSubmit, errors } = useForm();
-	 
+		 
 	 // On Submit
      const onSubmit = data => { 
 	      
@@ -84,13 +89,13 @@ function CreatePost() {
 
 					
                   	<label><b>Title:</b></label><br/>					  
-                    <input size="30" name="titlePost" ref={register({ required: true, maxLength: 25 })} />
+                    <input size="30" name="titlePost" {...register('titlePost', { required: true, maxLength: 25 })} />
 				    {errors.titlePost && <span> Required - max 25 characters</span>}
 							  
                     <br /> 
 							   
 				 	<label><b>Body:</b></label><br/>
-				    <textarea name="bodyPost" cols="32" rows="4" ref={register({ required: true, maxLength: 100 })} />
+				    <textarea name="bodyPost" cols="32" rows="4" {...register('bodyPost', { required: true, maxLength: 100 })} />
 				    {errors.bodyPost && <span> Required - max 100 characters</span>}
 							 					 
                     <br />

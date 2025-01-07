@@ -11,14 +11,21 @@ import App from 'components/App/';
 // Note: Using an Alias in Webpack
 import 'styles/index.scss';
 
-ReactDOM.render(
+// Note: When upgrading to React 19
+import { createRoot } from "react-dom/client";
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+
+root.render(
   
   <BrowserRouter>
   
   <App />
 	
-  </BrowserRouter>,
-  document.getElementById("root")
+  </BrowserRouter>
+
+
 ); 
 
 // Note: Before npm run build the statement module.hot.accept(); could / should to be disabled / comment out !!!

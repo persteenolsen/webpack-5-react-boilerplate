@@ -12,17 +12,18 @@ class About extends React.Component {
                 <br/> <br/>
 				
                 <b>Last Updated</b>  <br />
-                - 06-01-2025 <br /> <br />
+                - 07-01-2025 <br /> <br />
                 
 				
                 <b>Main functionality</b> <br />
                 
-                - Upgraded from Node 12.16 => Node 14.17 => 20.18.1<br />				
+                - Upgraded from Node 12.16 => Node 14.17 => 20.18.1<br />
+                - React Version: 19.0.0<br />				
 			    - Showing the power of Webpack <br />
                 - Showing routing in React <br />
 				- Custom 404 Error page. Click on the link Secret in the menu for e demo<br />
 				- Serving static assets like images, styles and fonts <br />
-				- Support for the IE 11 Browser when using React Hook Form<br />
+				- Support for the IE 11 Browser ended when using React Hook Form 7 <br />
 				- GET, POST, PUT and DELETE operations towards the test Web API <br /> <br />
 			                  
 			   
