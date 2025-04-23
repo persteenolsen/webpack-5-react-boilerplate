@@ -2,7 +2,7 @@
 //import '@babel/polyfill';
 //import 'regenerator-runtime/runtime';
 
-import React from "react";
+import React, { Profiler } from "react";
 import ReactDOM from "react-dom";
 
 // Note: Using an Alias in Webpack
@@ -17,10 +17,13 @@ class App extends React.Component {
 	   
       return (
          <div>
-		  <Header />	 
-		    <Menu />
-		  <Bottom />
-		
+            <Profiler id="TEST" onRender={(_, phase) => {
+               console.log('phase', phase)
+            }}>
+               <Header />	 
+                  <Menu />
+               <Bottom />
+            </Profiler>
          </div>
       );
    }
