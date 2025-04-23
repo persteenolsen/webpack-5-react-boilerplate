@@ -26,6 +26,11 @@ module.exports = merge(common, {
       chunkFilename: '[id].css',
     }),
   ],
+  resolve: {
+    alias: {
+      'react-dom$': 'react-dom/profiling',
+    }
+  },
   
   module: {
     rules: [
