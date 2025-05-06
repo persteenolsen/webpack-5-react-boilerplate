@@ -4,7 +4,7 @@ Webpack 5 boilerplate using React, Babel 7, PostCSS and Sass with a hot dev serv
 
 Last updated: 06-05-2025
 
-Node Version: 20.18.1
+Node Version: 22.15.0
 
 React Version: 19.0.0
 

@@ -11,13 +11,13 @@ class About extends React.Component {
                 - This single page application was made in React with a Webpack 5 configuration
                 <br/> <br/>
 				
-                <div className="test"><b>Last Updated</b></div>
+                <div className="test"><b>Last Updated:</b></div>
                 - 06-05-2025 <br /> <br />
                 
 				
                 <b>Main functionality</b> <br />
                 
-                - Upgraded from Node 12.16 - Node 14.17 - 20.18.1<br />
+                - Upgraded from Node 12.16 - Node 14.17 - 20.18.1 - 22.15.0<br />
                 - React Version: 19.0.0<br />				
 			    - Showing the power of Webpack <br />
                 - Showing routing in React <br />
