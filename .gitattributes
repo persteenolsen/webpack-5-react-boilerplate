@@ -1,6 +1,4 @@
 *.jsx linguist-language=React
-*.jsx linguist-detectable=true
-
 
 *.css linguist-detectable=false
 *.scss linguist-detectable=false
