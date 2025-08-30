@@ -1,3 +1,4 @@
+*.jsx linguist-language=React
 *.jsx linguist-detectable=true
 
 
