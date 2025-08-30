@@ -1,4 +1,4 @@
-*.jsx linguist-language=React
+src/components/about/*.jsx linguist-language=React
 
 *.css linguist-detectable=false
 *.scss linguist-detectable=false
