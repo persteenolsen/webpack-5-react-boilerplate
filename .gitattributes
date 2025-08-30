@@ -1,7 +1,5 @@
-src/components/about/*.jsx linguist-language=React
-src/components/about/*.jsx linguist-detectable=React
-
 *.css linguist-detectable=false
 *.scss linguist-detectable=false
 *.js linguist-detectable=false
 *.html linguist-detectable=false
+*.react linguist-detectable=true
