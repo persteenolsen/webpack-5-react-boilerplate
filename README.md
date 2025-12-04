@@ -2,11 +2,13 @@
 
 Webpack 5 boilerplate using React, Babel 7, PostCSS and Sass with a hot dev server and an optimized production build. Babel compiles ES6+ and React to ES5. 
 
-Last updated 30-11-2025
+Last updated 04-11-2025
 
 Node Version: 22.15.0
 
-React Version: 19.0.0
+Upgraded the React Version from: 19.0.0 to 19.0.1 due to security
+
+The security issue (CVE-2025-55182)
 
 # Usage
 
